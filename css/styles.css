@@ -17,3 +17,10 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
 }
+
+.draft-card {
+    background: #1f1f1f;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
