@@ -1,0 +1,25 @@
+/* TREDNING PAGE CSS START */
+
+#trendingContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.trendingMovieCard {
+  width: 15rem;
+  border: 2px solid #802828;
+}
+
+.trendingMovieCard img {
+  width: 100%;
+}
+
+.trendingMovieCard h3,
+.trendingMovieCard p {
+  margin: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* TREDNING PAGE CSS END */
