@@ -6,3 +6,11 @@ async function fetchTrending() {
   const data = await res.json();
   return data.results;
 }
+
+async function searchMovies(query) {
+  const res = await fetch(
+    `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}`,
+  );
+  const data = await res.json();
+  return data.results;
+}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* TREDNING PAGE CSS START */
 
 #trendingContainer {
@@ -24,48 +23,50 @@
 }
 
 /* TREDNING PAGE CSS END */
-=======
+
+/* HOME PAGE CSS START */
 :root {
-    --primary: #e50914;
-    --dark: #141414;
-    --text: #ffffff;
-    --gray: #b3b3b3;
+  --primary: #e50914;
+  --dark: #141414;
+  --text: #ffffff;
+  --gray: #b3b3b3;
 }
 
 body {
-    background-color: var(--dark);
-    color: var(--text);
-    font-family: sans-serif;
-    margin: 0;
+  background-color: var(--dark);
+  color: var(--text);
+  font-family: sans-serif;
+  margin: 0;
 }
 
 /* Grid */
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 .draft-card {
-    background: #1f1f1f;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #333;
+  background: #1f1f1f;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #333;
 }
 
 .draft-card img {
-    width: 100%;
-    aspect-ratio: 2/3;
-    object-fit: cover;
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
 }
 
 .draft-card h3 {
-    font-size: 1.1rem;
-    margin: 0;
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 .draft-hero {
-    background: #000;
-    border-bottom: 2px solid var(--primary);
+  background: #000;
+  border-bottom: 2px solid var(--primary);
 }
->>>>>>> 23dd026c7a130f6af87b477302911b8d32d66ebd
+
+/* HOME PAGE CSS END */
