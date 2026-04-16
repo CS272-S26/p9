@@ -24,3 +24,19 @@ body {
     overflow: hidden;
     border: 1px solid #333;
 }
+
+.draft-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.draft-card h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.draft-hero {
+    background: #000;
+    border-bottom: 2px solid var(--primary);
+}
