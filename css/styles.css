@@ -1,0 +1,12 @@
+root {
+    --primary: #e50914;
+    --dark: #141414;
+    --text: #ffffff;
+    --gray: #b3b3b3;
+}
+
+body {
+    background-color: var (var(--dark));
+    color: var(--text);
+    font-family: sans-serif;
+}
