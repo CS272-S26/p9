@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz - Snack & Stream</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <section class="quiz-section">
+
+        <h1>Movie Night Quiz</h1>
+
+        <label for="mood">Choose your mood:</label>
+
+        <select id="mood">
+
+            <option value="">Choose your mood...</option>
+            <option value="cozy">Cozy</option>
+            <option value="excited">Excited</option>
+            <option value="sad">Need Comfort</option>
+            <option value="curious">Curious</option>
+
+        </select>
+
+        <button onclick="getRecommendation()">
+            Get Recommendation
+        </button>
+
+        <p id="quiz-result"></p>
+
+    </section>
+
+    <script src="../js/quiz.js"></script>
+
+</body>
+
+</html>
