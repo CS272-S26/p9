@@ -1,30 +1,89 @@
-<label for="mood">What is your movie-night mood?</label>
-<select id="mood">
-    <option value="">Choose one...</option>
-    <option value="cozy">Cozy</option>
-    <option value="excited">Excited</option>
-    <option value="curious">Curious</option>
-</select>
+<!DOCTYPE html>
+<html lang="en">
 
-<label for="snack">Pick your snack:</label>
-<select id="snack">
-    <option value="">Choose one...</option>
-    <option value="popcorn">Popcorn</option>
-    <option value="chocolate">Chocolate</option>
-    <option value="chips">Chips</option>
-</select>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<label for="time">How much time do you have?</label>
-<select id="time">
-    <option value="">Choose one...</option>
-    <option value="short">Less than 30 minutes</option>
-    <option value="medium">About 1 hour</option>
-    <option value="long">Movie night</option>
-</select>
+    <title>Snack & Stream - Quiz</title>
 
-<button onclick="getRecommendation()">Get My Match</button>
-<div id="quiz-result"></div>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
 
-<p id="quiz-result"></p>
-<script src="../js/api.js"></script>
-<script src="../js/quiz.js"></script>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">🍿</span>
+                <span>Snack & Stream</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./trending.html">Trending</a></li>
+                <li><a href="./search.html">Search</a></li>
+                <li><a href="./quiz.html" class="active">Quiz</a></li>
+                <li><a href="./dashboard.html">My Dashboard</a></li>
+                <li><a href="./about.html">About Us</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <section class="quiz-page">
+
+        <div class="quiz-card">
+
+            <p class="quiz-tagline">🍿 Snack & Stream Quiz</p>
+
+            <h1>Find Your Movie Night Match</h1>
+
+            <p class="quiz-description">
+                Pick your mood, snack, and time. We’ll recommend a movie that fits your night.
+            </p>
+
+            <label for="mood">What is your movie-night mood?</label>
+
+            <select id="mood">
+                <option value="">Choose one...</option>
+                <option value="cozy">Cozy</option>
+                <option value="excited">Excited</option>
+                <option value="curious">Curious</option>
+            </select>
+
+            <label for="snack">Pick your snack:</label>
+
+            <select id="snack">
+                <option value="">Choose one...</option>
+                <option value="popcorn">Popcorn</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="chips">Chips</option>
+            </select>
+
+            <label for="time">How much time do you have?</label>
+
+            <select id="time">
+                <option value="">Choose one...</option>
+                <option value="short">Less than 30 minutes</option>
+                <option value="medium">About 1 hour</option>
+                <option value="long">Movie night</option>
+            </select>
+
+            <button class="quiz-button" onclick="getRecommendation()">
+                Get My Match
+            </button>
+
+            <div id="quiz-result"></div>
+
+        </div>
+
+    </section>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/quiz.js"></script>
+
+</body>
+
+</html>
