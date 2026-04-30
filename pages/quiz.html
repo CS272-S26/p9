@@ -1,41 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<label for="mood">What is your movie-night mood?</label>
+<select id="mood">
+    <option value="">Choose one...</option>
+    <option value="cozy">Cozy</option>
+    <option value="excited">Excited</option>
+    <option value="curious">Curious</option>
+</select>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Quiz - Snack & Stream</title>
+<label for="snack">Pick your snack:</label>
+<select id="snack">
+    <option value="">Choose one...</option>
+    <option value="popcorn">Popcorn</option>
+    <option value="chocolate">Chocolate</option>
+    <option value="chips">Chips</option>
+</select>
 
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
+<label for="time">How much time do you have?</label>
+<select id="time">
+    <option value="">Choose one...</option>
+    <option value="short">Less than 30 minutes</option>
+    <option value="medium">About 1 hour</option>
+    <option value="long">Movie night</option>
+</select>
 
-<body>
+<button onclick="getRecommendation()">Get My Match</button>
 
-    <section class="quiz-section">
-
-        <h1>Movie Night Quiz</h1>
-
-        <label for="mood">Choose your mood:</label>
-
-        <select id="mood">
-
-            <option value="">Choose your mood...</option>
-            <option value="cozy">Cozy</option>
-            <option value="excited">Excited</option>
-            <option value="sad">Need Comfort</option>
-            <option value="curious">Curious</option>
-
-        </select>
-
-        <button onclick="getRecommendation()">
-            Get Recommendation
-        </button>
-
-        <p id="quiz-result"></p>
-
-    </section>
-
-    <script src="../js/quiz.js"></script>
-
-</body>
-
-</html>
+<p id="quiz-result"></p>
