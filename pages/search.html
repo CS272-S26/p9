@@ -3,29 +3,78 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Search - Snack & Stream</title>
-
+        <title>Search - Snack &amp; Stream</title>
+        <meta name="description" content="Search for your favorite movies and TV shows." />
         <link rel="stylesheet" href="../css/styles.css" />
-
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     </head>
-
     <body>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="trending.html">Trending</a>
-            <a href="search.html">Search</a>
+        <nav class="navbar scrolled" id="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🍿</span>
+                    <span>Snack &amp; Stream</span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trending.html">Trending</a></li>
+                    <li><a href="search.html" class="active">Search</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="dashboard.html">My Dashboard</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+            </div>
         </nav>
 
-        <div class="container py-4">
-            <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search for a movie..." />
+        <section class="search-header">
+            <div class="container">
+                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem">🔍 Search</h1>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem">
+                    Find movies and TV shows by title, genre, or year.
+                </p>
+                <form class="search-form" id="searchForm">
+                    <input
+                        type="text"
+                        class="search-input"
+                        id="searchInput"
+                        placeholder="Search for movies, TV shows, actors..."
+                        autocomplete="off"
+                    />
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </section>
+        <section class="section" style="padding-top: 0">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="resultsTitle">All Content</h2>
+                    <span style="color: var(--text-secondary)" id="resultsCount">0 results</span>
+                </div>
 
-            <h4 id="searchTitle">All Content</h4>
+                <div class="cards-grid" id="searchResults">
+                    <a href="detail.html?id=1" class="card" data-type="movie" data-genre="scifi" data-year="2024">
+                        <div class="card-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&h=600&fit=crop"
+                                alt="Dune: Part Two"
+                            />
+                            <div class="card-overlay">
+                                <div class="card-play">▶</div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Dune: Part Two</h3>
+                            <div class="card-meta">
+                                <span class="card-rating">⭐ 8.8</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-            <div id="searchResults" class="row g-3"></div>
-        </div>
-
-        <script src="../js/api.js"></script>
+        <!-- <script src="../js/api.js"></script> -->
         <script src="../js/search.js"></script>
     </body>
 </html>
