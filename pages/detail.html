@@ -1,77 +1,83 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dune: Part Two - Snack &amp; Stream</title>
-        <meta name="description" content="View details, reviews, and add to your watchlist." />
-        <link rel="stylesheet" href="../css/styles.css" />
-    </head>
-    <body>
-        <nav class="navbar" id="navbar">
-            <div class="nav-container">
-                <a href="index.html" class="logo">
-                    <span class="logo-icon">🍿</span>
-                    <span>Snack & Stream</span>
-                </a>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./trending.html">Trending</a></li>
-                    <li><a href="./search.html">Search</a></li>
-                    <li><a href="./search.html">Quiz</a></li>
-                    <li><a href="./dashboard.html">My Dashboard</a></li>
-                    <li><a href="./about.html">About Us</a></li>
-                </ul>
-            </div>
-        </nav>
-        <section class="detail-hero">
-            <div class="detail-content">
-                <div class="detail-poster">
-                    <img
-                        src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&h=600&fit=crop"
-                        alt="Dune: Part Two poster"
-                    />
-                </div>
-                <div class="detail-info">
-                    <h1 id="detailTitle">Dune: Part Two</h1>
-                    <div class="detail-meta">
-                        <span>⭐ <strong id="detailRating">8.8</strong>/10</span>
-                        <span id="detailYear">2024</span>
-                        <span id="detailDuration">166 min</span>
-                        <span id="detailType">Movie</span>
-                    </div>
-                    <p class="detail-description" id="detailDescription">
-                        Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators
-                        who destroyed his family. Facing a choice between the love of his life and the fate of the known
-                        universe, he endeavors to prevent a terrible future only he can foresee.
-                    </p>
-                    <div class="detail-actions">
-                        <button class="btn btn-primary" id="saveBtn" onclick="toggleSave()">
-                            <span id="saveBtnText">+ Add to Watchlist</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section">
-            <h2 class="section-title" style="margin-bottom: 1.5rem">Cast &amp; Crew</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dune: Part Two - Snack &amp; Stream</title>
+    <meta
+      name="description"
+      content="View details, reviews, and add to your watchlist."
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">🍿</span>
+          <span>Snack & Stream</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="trending.html">Trending</a></li>
+          <li><a href="search.html">Search</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="dashboard.html">My Dashboard</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="detail-hero">
+      <div class="detail-content">
+        <div class="detail-poster">
+          <img
+            src="https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=400&h=600&fit=crop"
+            alt="Dune: Part Two poster"
+          />
+        </div>
+        <div class="detail-info">
+          <h1 id="detailTitle">Dune: Part Two</h1>
+          <div class="detail-meta">
+            <span>⭐ <strong id="detailRating">8.8</strong>/10</span>
+            <span id="detailYear">2024</span>
+            <span id="detailDuration">166 min</span>
+            <span id="detailType">Movie</span>
+          </div>
+          <p class="detail-description" id="detailDescription">
+            Paul Atreides unites with Chani and the Fremen while seeking revenge
+            against the conspirators who destroyed his family. Facing a choice
+            between the love of his life and the fate of the known universe, he
+            endeavors to prevent a terrible future only he can foresee.
+          </p>
+          <div class="detail-actions">
+            <button class="btn btn-primary" id="saveBtn" onclick="toggleSave()">
+              <span id="saveBtnText">+ Add to Watchlist</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <h2 class="section-title" style="margin-bottom: 1.5rem">
+        Cast &amp; Crew
+      </h2>
 
-            <div class="cast-grid">
-                <div class="cast-item">
-                    <p class="cast-name">Timothée Chalamet</p>
-                    <p class="cast-role">Paul Atreides</p>
-                </div>
+      <div class="cast-grid">
+        <div class="cast-item">
+          <p class="cast-name">Timothée Chalamet</p>
+          <p class="cast-role">Paul Atreides</p>
+        </div>
 
-                <div class="cast-item">
-                    <p class="cast-name">Zendaya</p>
-                    <p class="cast-role">Chani</p>
-                </div>
+        <div class="cast-item">
+          <p class="cast-name">Zendaya</p>
+          <p class="cast-role">Chani</p>
+        </div>
 
-                <div class="cast-item">
-                    <p class="cast-name">Rebecca Ferguson</p>
-                    <p class="cast-role">Lady Jessica</p>
-                </div>
-            </div>
-        </section>
-    </body>
+        <div class="cast-item">
+          <p class="cast-name">Rebecca Ferguson</p>
+          <p class="cast-role">Lady Jessica</p>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

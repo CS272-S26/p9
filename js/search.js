@@ -1,6 +1,13 @@
 const input = document.getElementById("searchInput");
 const resultsContainer = document.getElementById("searchResults");
-const title = document.getElementById("searchTitle");
+const title = document.getElementById("resultsTitle");
+const count = document.getElementById("resultsCount");
+const form = document.getElementById("searchForm");
+
+// prevent page refresh
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
 
 // Load trending by default
 loadAllContent();
@@ -20,36 +27,86 @@ input.addEventListener("input", async () => {
   displayMovies(movies);
 });
 
-// Load trending as default
+// Load trending
 async function loadAllContent() {
   const movies = await fetchTrending();
   displayMovies(movies);
 }
 
-// Display function
+// Display movies
 function displayMovies(movies) {
   resultsContainer.innerHTML = "";
 
+  const savedMovies = getSavedMovies();
+
   movies.forEach((movie) => {
     const col = document.createElement("div");
-    col.classList.add("col-12", "col-sm-6", "col-md-4", "col-lg-3");
+
+    const poster = movie.poster_path
+      ? `https://image.tmdb.org/t/p/w200${movie.poster_path}`
+      : "../assets/placeholderImg.gif";
+
+    const isSaved = savedMovies.some((m) => m.id === movie.id);
 
     col.innerHTML = `
-      <div class="card h-100">
+      <div class="card h-100 position-relative">
         <img 
-          src="https://image.tmdb.org/t/p/w200${movie.poster_path}" 
+          src="${poster}" 
           class="card-img-top"
           alt="${movie.title}"
         >
         <div class="card-body">
           <h5 class="card-title">${movie.title}</h5>
-          <p class="card-text">
+
+          <p class="card-text text-white">
             ⭐ ${movie.vote_average}/10
           </p>
+            <button class="save-btn ${isSaved ? "saved" : ""}">
+          ${isSaved ? "Saved" : "Save"}
+        </button>
         </div>
       </div>
     `;
 
+    const saveBtn = col.querySelector(".save-btn");
+
+    saveBtn.addEventListener("click", () => {
+      saveBtn.classList.toggle("saved");
+
+      if (saveBtn.classList.contains("saved")) {
+        saveBtn.textContent = "Saved";
+        saveMovie(movie);
+      } else {
+        saveBtn.textContent = "Save";
+        removeMovie(movie.id);
+      }
+    });
+
     resultsContainer.appendChild(col);
   });
+
+  count.textContent = `${movies.length} results`;
+}
+
+function getSavedMovies() {
+  return JSON.parse(localStorage.getItem("savedMovies")) || [];
+}
+
+function saveMovie(movie) {
+  let savedMovies = getSavedMovies();
+
+  const alreadySaved = savedMovies.some((m) => m.id === movie.id);
+
+  if (!alreadySaved) {
+    savedMovies.push(movie);
+    localStorage.setItem("savedMovies", JSON.stringify(savedMovies));
+  }
+}
+
+function removeMovie(id) {
+  let savedMovies = getSavedMovies();
+
+  savedMovies = savedMovies.filter((movie) => movie.id !== id);
+
+  localStorage.setItem("savedMovies", JSON.stringify(savedMovies));
 }
