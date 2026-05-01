@@ -686,3 +686,84 @@ body {
   color: #d6d6d6;
   line-height: 1.5;
 }
+
+/** ABOUT US STYLES START**/
+.about-section {
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section h1 {
+  margin-bottom: 1rem;
+}
+
+.about-section h2 {
+  color: #e50914;
+  margin-top: 2rem;
+}
+
+.about-section p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.about-section ul {
+  padding-left: 1.2rem;
+}
+
+.about-section li {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+/** ABOUT US STYLES END **/
+
+/**CONTACT US STYLE START **/
+.contact-section {
+  color: white;
+  max-width: 700px;
+}
+
+.contact-section p,
+.contact-section label {
+  color: #ccc;
+}
+
+.contact-section .form-control {
+  background-color: #1f1f1f;
+  color: white;
+  border: 1px solid #555;
+}
+
+.contact-section .form-control::placeholder {
+  color: #999;
+}
+
+.contact-section .form-control:focus {
+  background-color: #1f1f1f;
+  color: white;
+  border-color: #e50914;
+  box-shadow: none;
+}
+
+.contact-btn {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background-color: #b20710;
+}
+
+/** CONTACT US END**/
+body {
+  padding-top: 80px;
+}
+
+.section {
+  padding-top: 2rem;
+}
