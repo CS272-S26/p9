@@ -1,5 +1,9 @@
 const savedMoviesContainer = document.getElementById("savedMoviesContainer");
 
+/**
+ * Load saved moveis from local storage and display them on dashboard
+ *
+ */
 function loadSavedMovies() {
   const savedMovies = JSON.parse(localStorage.getItem("savedMovies")) || [];
 
@@ -14,6 +18,7 @@ function loadSavedMovies() {
   savedMovies.forEach((movie) => {
     const card = document.createElement("div");
 
+    //use place holder image if no poster image provided
     const poster = movie.poster_path
       ? `https://image.tmdb.org/t/p/w200${movie.poster_path}`
       : "../assets/placeholderImg.gif";
@@ -47,20 +52,26 @@ function loadSavedMovies() {
   addRemoveButtons();
 }
 
+/**
+ * When user click the remove button, the move is removed from local storage and ui is updated
+ */
 function addRemoveButtons() {
   const removeButtons = document.querySelectorAll(".remove-btn");
 
   removeButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const movieId = Number(button.dataset.id);
+      const movieId = Number(button.dataset.id); //get movie id
 
+      //retireve current saved movie
       let savedMovies = JSON.parse(localStorage.getItem("savedMovies")) || [];
 
+      //remove the movie
       savedMovies = savedMovies.filter((movie) => movie.id !== movieId);
 
+      //update local storage
       localStorage.setItem("savedMovies", JSON.stringify(savedMovies));
 
-      loadSavedMovies();
+      loadSavedMovies(); //update ui
     });
   });
 }
